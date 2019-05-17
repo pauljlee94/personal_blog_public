@@ -1,0 +1,27 @@
+@import '~@angular/material/theming';
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+@include mat-core();
+
+
+$blog-primary: mat-palette($mat-blue-grey, 900);
+$blog-accent:  mat-palette($mat-blue, 600);
+
+$blog-warn:    mat-palette($mat-red);
+
+$blog-theme: mat-light-theme($blog-primary, $blog-accent, $blog-warn);
+
+@include angular-material-theme($blog-theme);
+
+* {
+    margin: 0;
+    font-family: 'Roboto Mono', monospace;
+}
+
+span {
+    cursor: pointer;
+}
+
+span:focus {
+    outline: none;
+    border: 0;
+}
